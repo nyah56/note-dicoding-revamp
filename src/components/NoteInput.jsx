@@ -1,8 +1,9 @@
 import { useState } from 'react';
 
-const NoteInput = (props) => {
+const NoteInput = ({ onSubmit }) => {
   const onTitleEventHandler = (e) => {
     // setKarakter(() => e.target.value.length);
+    console.log(e.target.value);
     if (e.target.value.length <= 15) {
       setState((prevState) => ({
         titleLimit: {
@@ -27,7 +28,9 @@ const NoteInput = (props) => {
   };
   const onSubmitEventHandler = (e) => {
     e.preventDefault();
-    props.addNote(state.note);
+    const note = { ...state.note };
+
+    onSubmit(note);
     setState((prevState) => ({
       note: {
         title: '',

@@ -1,17 +1,13 @@
 import React from 'react';
-
-function NoteHeader({ onSearch }) {
+import NoteSearch from './NoteSearch';
+const NoteHeader = ({ onSearch }) => {
   return (
     <div className="note-app__header">
       <h1>MyNotes</h1>
       <div className="note-search">
-        <input
-          type="text"
-          placeholder="Cari Catatan..."
-          onChange={(event) => onSearch(event)}
-        />
+        <NoteSearch onSearch={onSearch} />
       </div>
     </div>
   );
-}
+};
 export default NoteHeader;

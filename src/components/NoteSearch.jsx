@@ -1,15 +1,11 @@
-import React from 'react';
+import { useState } from 'react';
 
-function NoteSearch({ onSearch }) {
+const NoteSearch = ({ onSearch }) => {
   return (
     <div className="note-search">
-      <input
-        type="text"
-        placeholder="Cari Catatan..."
-        onChange={(event) => onSearch(event)}
-      />
+      <input type="text" placeholder="Cari Catatan..." onChange={onSearch} />
     </div>
   );
-}
+};
 
 export default NoteSearch;

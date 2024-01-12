@@ -1,7 +1,7 @@
 import React from 'react';
 import { showFormattedDate } from '../utils';
 
-function NoteItem({ note, onDelete, onArchive }) {
+const NoteItem = ({ note, onDelete, onArchive }) => {
   return (
     <div className="note-item">
       <div className="note-item__content">
@@ -25,5 +25,5 @@ function NoteItem({ note, onDelete, onArchive }) {
       </div>
     </div>
   );
-}
+};
 export default NoteItem;
